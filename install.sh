@@ -329,8 +329,8 @@ function Install_Compose(){
             log "$TXT_DOCKER_COMPOSE_INSTALL_SUCCESS"
         fi
     else
-        compose_v=$(docker-compose -v)
-        if [[ $compose_v =~ 'docker-compose' ]];then
+        compose_v=$(docker compose -v)
+        if [[ $compose_v =~ 'docker compose' ]];then
             read -p "$TXT_LOWER_VERSION_DETECTED " UPGRADE_DOCKER_COMPOSE
             if [[ "$UPGRADE_DOCKER_COMPOSE" == "Y" ]] || [[ "$UPGRADE_DOCKER_COMPOSE" == "y" ]]; then
                 rm -rf /usr/local/bin/docker-compose /usr/bin/docker-compose
