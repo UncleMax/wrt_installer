@@ -321,7 +321,7 @@ function Install_Compose(){
             ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
         fi
 
-        docker-compose version >/dev/null 2>&1
+        docker compose version >/dev/null 2>&1
         if [[ $? -ne 0 ]]; then
             log "$TXT_DOCKER_COMPOSE_INSTALL_FAIL"
             exit 1
