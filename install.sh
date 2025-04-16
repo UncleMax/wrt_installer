@@ -301,7 +301,7 @@ function Install_Docker(){
 }
 
 function Install_Compose(){
-    docker-compose version >/dev/null 2>&1
+    docker compose version >/dev/null 2>&1
     if [[ $? -ne 0 ]]; then
         log "$TXT_DOCKER_COMPOSE_INSTALL_ONLINE"
         if which opkg &>/dev/null;then
